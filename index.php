@@ -60,7 +60,7 @@
     <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
       <div class="container text-center text-md-left" data-aos="fade-up">
         <h1>Selamat Datang</h1>
-        <h2>Peta Persebaran Pendidikan Kota Administrasi Jakarta Selatan</h2>
+        <h2>Peta Persebaran Fasilitas Pendidikan Kota Administrasi Jakarta Selatan</h2>
         <a href="peta.php" class="btn-get-started scrollto">Mulai</a>
       </div>
     </section><!-- End Hero -->
