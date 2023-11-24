@@ -11,14 +11,14 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   
-    <!-- Vendor CSS Files -->
+    
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   
-    <!-- Template Main CSS File -->
+   
     <link href="assets/css/style.css" rel="stylesheet">
     <title>SIPENJAKS by Joseph Damarseto</title>
 
@@ -27,8 +27,7 @@
   
         <div class="logo me-auto">
           <h1><a href="peta.php">SI.PENJAKS</a></h1>
-          <!-- Uncomment below if you prefer to use an image logo -->
-          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          
         </div>
   
         <nav id="navbar" class="navbar order-last order-lg-0">
@@ -67,7 +66,7 @@
   
     <main id="main">
   
-      <!-- ======= What We Do Section ======= -->
+     
       <section id="what-we-do" class="what-we-do">
         <div class="container">
   
