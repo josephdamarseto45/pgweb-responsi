@@ -1,463 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>SIPENJAKS by Joseph Damarseto</title>
 
-   
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <!-- Marker Cluster -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-markercluster/MarkerCluster.css"
-    />
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-markercluster/MarkerCluster.Default.css"
-    />
-    <!-- Routing -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-routing/leaflet-routing-machine.css"
-    />
-    <!-- Search CSS Library -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-search/leaflet-search.css"
-    />
-    <!-- Geolocation CSS Library for Plugin -->
-    <link
-      rel="stylesheet"
-      href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.css"
-    />
-    <!-- Leaflet Mouse Position CSS Library -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-mouseposition/L.Control.MousePosition.css"
-    />
-    <!-- Leaflet Measure CSS Library -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-measure/leaflet-measure.css"
-    />
-    <!-- EasyPrint CSS Library -->
-    <link
-      rel="stylesheet"
-      href="assets/plugins/leaflet-easyprint/easyPrint.css"
-    />
-    <style>
-    html, body, #map {
-        height: 100%;
-        width: 100%;
-        margin: 0px;
-    }
-    /* Background pada Judul */
-    *.info {
-        padding: 6px 8px;
-        font: 14px/16px Arial, Helvetica, sans-serif;
-        background: white;
-        background: rgba(255, 255, 255, 0.8);
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        border-radius: 5px;
-        text-align: center;
-    }
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center">
+  
+        <div class="logo me-auto">
+          <h1><a href="peta.php">SI.PENJAKS</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>  
+            <li><a class="nav-link scrollto" href="#map">Menu</a></li>
+            <li class="dropdown"><a href="#"><span>More</span> <i class="bi bi-chevron-down"></i></a>
+              <ul>
+                <li><a class="nav-link scrollto" href="#about">About</a></li>
+                <li><a class="nav-link scrollto" href="#about">Profil</a></li>                     
+              </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true" data-bs-toggle="modal" data-bs-target="#infoModal"><i
+                                class="fa-solid fa-circle-info"></i> Info</a>
+                    </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <div class="header-social-links d-flex align-items-center">
+          <a href="https://instagram.com/josephdmrs?igshid=NzZlODBkYWE4Ng==" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/joseph-damarseto-ugm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+        </div>
+  
+      </div>
+    </header><!-- End Header -->
+  
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+      <div class="container text-center text-md-left" data-aos="fade-up">
+        <h1>Selamat Datang</h1>
+        <h2>Peta Persebaran Pendidikan Kota Administrasi Jakarta Selatan</h2>
+        <a href="peta.php" class="btn-get-started scrollto">Mulai</a>
+      </div>
+    </section><!-- End Hero -->
+  
+    <main id="main">
+  
+      <!-- ======= What We Do Section ======= -->
+      <section id="what-we-do" class="what-we-do">
+        <div class="container">
+  
+          <div class="section-title">
+          <section id="map" class="map">
+            <h2><a href="#map">Menu</h2>
+            <p>Informasi persebaran fasilitas pendidikan Kota Administrasi Jakarta Selatan</p>
+          </div>
+  
+          <div class="row">
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="https://selatan.jakarta.go.id/">Web Resmi Jakarta Selatan</a></h4>
+                <p>Profil Umum Kota Administrasi Jakarta Selatan</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="peta.php">Peta Fasilitas Pendidikan</a></h4>
+                <p>Peta Persebaran Fasilitas Pendidikan Kota Administrasi Jakarta Selatan</p>
+              </div>
+            </div>
+  
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="icon-box">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="datajaksel.html">Data Informasi</a></h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End What We Do Section -->
+  
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+  
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/img/jaksel.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0">
+              <h3>SIPENJAKS?</h3>
+              <p>
+                Peta Web GIS Interaktif yang disusun oleh Joseph Damarseto. Menyajikan peta wilayah Kota Administrasi Jakarta Selatan yang diisi dengan berbagai macam
+                informasi mengenai fasilitas pendidikan yang tersevar di seluruh wilayah Kota Administrasi Jakarta.
+              </p>
+              <ul>
+                <li><i class="bx bx-check-double"></i> Profil </li>
+                <li><i class="bx bx-check-double"></i> Peta WebGIS</li>
+                <li><i class="bx bx-check-double"></i> Data Informasi</li>
+              </ul>
 
-    .info h2 {
-        margin: 0 0 5px;
-        color: #777;
-    }
-</style>
-  </head>
+              <h3>PROFIL SIPENJAKS</h3>
+              <p>
+                Created by Joseph Damarseto - 22/502852/SV/21451 - Sistem Informasi Geografis - Departemen Teknologi Kebumian - Sekolah Vokasi - Universitas Gadjah Mada
+              </p>
+            
+              <!-- Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="infoModalLabel"><i class="fa-solid fa-circle-info"></i> Info</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Nama: Joseph Damarseto</p>
+                    <p>NIM: 22/502852/SV/21451</p>
+                    <p>Kelas: B</p>
+                    <p>Sumber Data: <a href="https://jakselkota.bps.go.id/ " a>https://jakselkota.bps.go.id/</a></p>
 
-  <body>
-    <div id="map"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- Include your GeoJSON data -->
-    <script src="./data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
 
-    <!-- Leaflet and Plugins -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="assets/plugins/leaflet-markercluster/leaflet.markercluster.js"></script>
-    <script src="assets/plugins/leaflet-markercluster/leaflet.markercluster-src.js"></script>
-    <script src="assets/plugins/leaflet-routing/leaflet-routing-machine.js"></script>
-    <script src="assets/plugins/leaflet-routing/leaflet-routing-machine.min.js"></script>
-    <script src="assets/plugins/leaflet-search/leaflet-search.js"></script>
-    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.43.0/L.Control.Locate.min.js"></script>
-    <script src="assets/plugins/leaflet-mouseposition/L.Control.MousePosition.js"></script>
-    <script src="assets/plugins/leaflet-measure/leaflet-measure.js"></script>
-    <script src="assets/plugins/leaflet-easyprint/leaflet.easyPrint.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.42.0/apexcharts.min.js"
+        integrity="sha512-HctQcT5hnI/elQck4950pvd50RuDnjCSGSoHI8CNyQIYVxsUoyJ+gSQIOrll4oM/Z7Kfi7WCLMIbJbiwYHFCpA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
-      // Initialize the map
-      var map = L.map("map").setView([-6.283818, 106.804863], 10);
-
-      // Basemaps
-      var basemap1 = L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          attribution:
-            'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        }
-      );
-      basemap1.addTo(map);
-
-      // Point 
-      
-      // Create a GeoJSON layer for polygon data
-      var geoservermap = L.geoJson(null, {
-        style: function (feature) {
-          // Adjust this function to define styles based on your polygon properties
-          var value = feature.properties.jmlhfaspen; // Change this to your actual property name
-          return {
-            fillColor: getColor(value),
-            weight: 2,
-            opacity: 1,
-            color: "white",
-            dashArray: "3",
-            fillOpacity: 0.7,
-          };
-        },
-        onEachFeature: function (feature, layer) {
-  // Adjust the popup content based on your polygon properties
-  var content =
-    "Kecamatan: " +
-    feature.properties.namobj +
-    "<br>" +
-    "SD: " +
-    feature.properties.sd +
-    "<br>" +
-    "SMP: " +
-    feature.properties.smp +
-    "<br>" +
-    "SMA: " +
-    feature.properties.sma +
-    "<br>" +
-    "Perguruan Tinggi: " +
-    feature.properties.pt +
-    "<br>" +
-    "Jumlah Fasilitas Pendidikan: " +
-    feature.properties.jmlhfaspen +
-    "<br>";;
-  layer.bindPopup(content, { maxWidth: '500' });
-},
-      });
-
-      
-      // Fetch GeoJSON data from geoserver.php
-      $.getJSON("geoservermap.php", function (data) {
-        geoservermap.addData(data);
-        geoservermap.addTo(map);
-        map.fitBounds(geoservermap.getBounds());
-      });
-
-      // Array of markers
-      var markersArray = [
-        {
-          coordinates: [-6.255411008595897, 106.8107879769063],
-          options: { draggable: true },
-          popupContent: "Gedung B DIVSIG UGM",
-        },
-        {
-          coordinates: [-6.255411008595897, 106.8107879769063],
-          options: {},
-          popupContent: "RS.Akademik UGM",
-        },
-      ];
-
-      // // Add GeoJSON data to the map
-      // L.geoJson(data).addTo(map);
-
-      // // Create a marker cluster group
-      // var markers = L.markerClusterGroup();
-
-      // // Add markers to the cluster group
-      // markersArray.forEach(function (markerInfo) {
-      //   var marker = L.marker(markerInfo.coordinates, markerInfo.options);
-      //   marker.addTo(markers);
-      //   marker.bindPopup(markerInfo.popupContent);
-      // });
-
-      // Title
-      var title = new L.Control();
-      title.onAdd = function (map) {
-        this._div = L.DomUtil.create("div", "info");
-        this.update();
-        return this._div;
-      };
-      title.update = function () {
-        this._div.innerHTML =
-          "<h2>WEBGIS - JUMLAH PENDUDUK DAN TITIK PERSEBARAN KOS</h2>PEMROGRAMAN SPASIAL : WEB - JOSEPH DAMARSETO";
-      };
-      title.addTo(map);
-
-      // Watermark 
-      L.Control.Watermark = L.Control.extend({
-        onAdd: function (map) {
-          var container = L.DomUtil.create("div", "leaflet-control-watermark");
-          var img = L.DomUtil.create("img", "watermark-image");
-          img.src = "assets/img/logo/LOGO_SIG_BLUE.png";
-          img.style.width = "120px";
-          container.appendChild(img);
-          return container;
-        },
-      });
-      L.control.watermark = function (opts) {
-        return new L.Control.Watermark(opts);
-      };
-
-      L.control.watermark({ position: "bottomleft" }).addTo(map);
-      
-      // Legend
-      L.Control.Legend = L.Control.extend({
-        onAdd: function (map) {
-          var img = L.DomUtil.create("img");
-          img.src = "assets/img/legend/Presentation1.png";
-          img.style.width = "250px";
-          return img;
-        },
-      });
-      L.control.Legend = function (opts) {
-        return new L.Control.Legend(opts);
-      };
-
-      L.control.Legend({ position: "bottomleft" }).addTo(map);
-      // Basemaps
-      var basemap1 = L.tileLayer(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          attribution:
-            'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        }
-      );
-
-      var basemap2 = L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
-        {
-          attribution:
-            'Tiles &copy; Esri | <a href="DIVSIGUGM" target="_blank">DIVSIG UGM</a>',
-        }
-      );
-
-      var basemap3 = L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-        {
-          attribution:
-            'Tiles &copy; Esri | <a href="Lathan WebGIS" target="_blank">DIVSIG UGM</a>',
-        }
-      );
-
-      var basemap4 = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png",
-        {
-          attribution:
-            '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-        }
-      );
-
-      basemap3.addTo(map);
-
-      var baseMaps = {
-        OpenStreetMap: basemap1,
-        "Esri World Street": basemap2,
-        "Esri Imagery": basemap3,
-        "Stadia Dark Mode": basemap4,
-      };
-
-      L.control.layers(baseMaps).addTo(map);
-
-      // Plugin Search
-      var searchControl = new L.Control.Search({
-        position: "topleft",
-        layer: geoservermap, // Nama variabel layer
-        propertyName: "kecamatan", // Field untuk pencarian
-        marker: false,
-        moveToLocation: function (latlng, title, map) {
-          var zoom = map.getBoundsZoom(latlng.layer.getBounds());
-          map.setView(latlng, zoom);
-        },
-      });
-
-      searchControl
-        .on("search:locationfound", function (e) {
-          e.layer.setStyle({
-            fillColor: "#ffff00",
-            color: "#0000ff",
-          });
-        })
-        .on("search:collapse", function (e) {
-            geoservermap.eachLayer(function (layer) {
-            geoservermap.resetStyle(layer);
-          });
-        });
-
-      map.addControl(searchControl);
-
-      // Plugin Geolocation
-      var locateControl = L.control
-        .locate({
-          position: "topleft",
-          drawCircle: true,
-          follow: true,
-          setView: true,
-          keepCurrentZoomLevel: false,
-          markerStyle: {
-            weight: 1,
-            opacity: 0.8,
-            fillOpacity: 0.8,
-          },
-          circleStyle: {
-            weight: 1,
-            clickable: false,
-          },
-          icon: "fas fa-crosshairs",
-          metric: true,
-          strings: {
-            title: "Click for Your Location",
-            popup: "You're here. Accuracy {distance} {unit}",
-            outsideMapBoundsMsg: "Not available",
-          },
-          locateOptions: {
-            maxZoom: 16,
-            watch: true,
-            enableHighAccuracy: true,
-            maximumAge: 10000,
-            timeout: 10000,
-          },
-        })
-        .addTo(map);
-
-      // Plugin Mouse Position Coordinate
-      L.control
-        .mousePosition({
-          position: "bottomright",
-          separator: ",",
-          prefix: "Point Coodinate: ",
-        })
-        .addTo(map);
-
-      // Plugin Measurement Tool
-      var measureControl = new L.Control.Measure({
-        position: "topleft",
-        primaryLengthUnit: "meters",
-        secondaryLengthUnit: "kilometers",
-        primaryAreaUnit: "hectares",
-        secondaryAreaUnit: "sqmeters",
-        activeColor: "#FF0000",
-        completedColor: "#00FF00",
-      });
-
-      measureControl.addTo(map);
-
-      // Plugin EasyPrint
-      L.easyPrint({
-        title: "Print",
-      }).addTo(map);
-
-      // Plugin Routing
-      L.Routing.control({
-        waypoints: [
-          L.latLng(-6.283818, 106.804863),
-          L.latLng(-6.283818, 106.804863),
-        ],
-        routeWhileDragging: true,
-      }).addTo(map);
-
-      // Layer Marker
-      var addressPoints = [
-       [-6.2555903710460505, 106.8122856022436, "SD New Zealand Independent School"],
-        [-6.24878860000132, 106.82983255760436, "SDN Tegal Parang 01"],
-        [-6.247805021759297, 106.81288843790665, "Sekolah Dasar Kupu - Kupu"],
-        [-6.256580248551017, 106.81453819898279, "SDS Kembang"],
-        [-6.25325863873464, 106.81832256674214, "SDS Delima"],
-
-        [-6.250859984424223, 106.82466033875741, "SMP Negeri 104"],
-        [-6.24884255888574, 106.82217923780149, "SMP Negeri 141"],
-        [-6.244144537443291, 106.82153401092012, "Smp Dharma Satria"],
-        [-6.240006386314908, 106.82642024505223, "SMPN 43"],
-
-        [-6.247698012385869, 106.81220309742685, "SMA GARUDA CENDEKIA"],
-        [-6.261880428079171, 106.81305542303515, "SMA Pelita Harapan Kemang Village"],
-        [-6.249760457406597, 106.83500359557779, "SMAS 28 OKTOBER 1928"],
-        [-6.2541972608002405, 106.81088575319471, "SMAS AL AZHAR SYIFA BUDI"],
-
-        [-6.2611993234053775, 106.81685409557782, "Indonesia Banking School STIE (IBS)"],
-        [-6.239234593749033, 106.81771176674211, "Sekolah Tinggi Desain Interstudi"],
-        
-        [-6.245157198246215, 106.79166589557772, "SMA LABSCHOOL KEBAYORAN"],
-        [-6.259350025817789, 106.7883801083564, "SMA D Royal Moroco Integrative Islamic School	"],
-        [-6.248110228634619, 106.79097336674221, "Sma Muhammadiyah 3 Jakarta"],
-        [-6.245769972521596, 106.81221276674206, "SMA TARAKANITA 1 JAKARTA"],
-        [-6.25885689705392, 106.7921422405344, "SMA Gita Kirtti 3"],
-        [-6.254020493734447, 106.80638372441342, "SMU Pangudi Luhur Brawijaya"],
-        [-6.247213958865347, 106.80124226859122, "SMA 4 PSKD"],
-        [-6.241137698004668, 106.80588653790652, "SMA Purnama"],
-        [-6.260371388296246, 106.76370066674231, "SMA Triguna Jakarta"],
-
-        [-6.240281659013333, 106.78964899557768, "SMPN 11 JAKARTA"],
-        [-6.249740457205481, 106.80346744887619, "SMP Negeri 12 Jakarta"],
-        [-6.246277577180542, 106.7947667360575, "SMP Tarakanita 5"],
-        [-6.263679293724922, 106.80981606674223, "SMPN 250"],
-        [-6.239836793748444, 106.78955830907094, "SMP Negeri 19 Jakarta"],
-
-        
-        [-6.24768597045966, 106.79104934449408, "Universitas Muhammadiyah Prof. Dr. HAMKA"],
-        [-6.2357525509278995, 106.80298581983278, "Universitas Bhayangkara"],
-        [-6.245101102744458, 106.80708212441334, "Sekolah Tinggi Ilmu Kepolisian (STIK) PTIK"],
-        [-6.253226220446612, 106.79793844628138, "Universitas Bhayangkara Jaya (Ubhara Jaya)"],
-        [-6.234792859130449, 106.7989840379065, "University of Al Azhar Indonesia"],
-        [-6.258200074631754, 106.79223221038667, "STMIK Jakarta STI&K"],
-        [-6.252725658747572, 106.79838169557779, "STIKOM InterStudi"],
-        [-6.241626832097744, 106.7888989630977, "Sahid Polytechnic"], 
-      ];
-
-      var markers = L.markerClusterGroup();
-
-    
-
-      for (var i = 0; i < addressPoints.length; i++) {
-        var a = addressPoints[i];
-        var title1 = a[2];
-        var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title1 });
-
-        marker.bindPopup(title1);
-        markers.addLayer(marker);
-      }
-
-      
-
-      var markers = L.markerClusterGroup();
-
-    
-
-      for (var i = 0; i < addressPoints.length; i++) {
-        var a = addressPoints[i];
-        var title1 = a[2];
-        var marker = L.marker(new L.LatLng(a[0], a[1]), { title: title1 });
-
-        marker.bindPopup(title1);
-        markers.addLayer(marker);
-      }
-
-      map.addLayer(markers);
-      //Function to determine the color based on the 'value' attribute
-      function getColor(value) {
-        return value < 16
-    ? "#02367b"    // 
-    : value >= 20 && value <= 33
-    ? "#0496c7"  // 
-    : value > 34
-    ? "#55e2e9" // 
-    : "#55e2e9";
-   
-}
-
     </script>
- </body>
+</body>
 </html>

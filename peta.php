@@ -435,14 +435,6 @@ layer.bindPopup(content, { maxWidth: '500' });
   }
 
   map.addLayer(markers);
-  //Function to determine the color based on the 'value' attribute
-  /*function getColor(value) {
-    return value < 16
-? "#02367b"    // 
-: value >= 20 && value <= 33
-? "#0496c7"  // 
-: value > 34
-? "#55e2e9" // */
 
 function getColor(value) {
         return value == "23"
