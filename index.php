@@ -98,7 +98,7 @@
               <div class="icon-box">
                 <div class="icon"><i class="bx bx-tachometer"></i></div>
                 <h4><a href="datajaksel.html">Data Informasi</a></h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                <p>Data infografis penduduk dan fasilitas pendidikan</p>
               </div>
             </div>
   
